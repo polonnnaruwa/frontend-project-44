@@ -27,11 +27,11 @@ const brainEvenGame = () => {
             console.log('Correct!');
         }
         else if (!isEven(random) && answer === 'yes') {
-            console.log('"yes" is wrong answer ;(. Correct answer was "no". Let\'s try again, Bill!');
+            console.log(`"yes" is wrong answer ;(. Correct answer was "no". Let's try again, ${name}!`);
             return; 
         }
         else if (isEven(random) && answer === 'no') {
-            console.log(`"no" is wrong answer ;(. Correct answer was "yes". Let\'s try again, ${name}!`);
+            console.log(`"no" is wrong answer ;(. Correct answer was "yes". Let's try again, ${name}!`);
             return;
         }
     }
