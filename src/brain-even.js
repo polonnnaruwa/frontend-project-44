@@ -31,7 +31,7 @@ const brainEvenGame = () => {
             return; 
         }
         else if (isEven(random) && answer === 'no') {
-            console.log('"no" is wrong answer ;(. Correct answer was "yes". Let\'s try again, Bill!');
+            console.log(`"no" is wrong answer ;(. Correct answer was "yes". Let\'s try again, ${name}!`);
             return;
         }
     }
