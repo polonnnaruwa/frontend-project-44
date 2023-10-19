@@ -16,14 +16,14 @@ const brainCalc = () => {
         let B = getRandomInt(1, 20);
         const sum = A + B;
 
-        console.log(`'Question:'${A} + ${B}`);
+        console.log(`Question:${A} + ${B}`);
 
         let answer = readlineSync.question('Your answer:');
 
-        if (answer === sum ) {
+        if (parseInt(answer) === sum ) {
             console.log('Correct!');
         } else {
-            console.log(`!sum is wrong answer ;(. Correct answer was sum. Let's try again, ${name}!`);
+            console.log(`${answer} is wrong answer ;(. Correct answer was ${sum}. Let's try again, ${name}!`);
             return;
         }
     console.log(`Congratulations, ${name}!`);
