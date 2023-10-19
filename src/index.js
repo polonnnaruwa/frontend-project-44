@@ -23,7 +23,7 @@ const brainCalc = () => {
         if (answer === sum ) {
             console.log('Correct!');
         } else {
-            console.log(`"!sum" is wrong answer ;(. Correct answer was "sum". Let's try again, ${name}!`);
+            console.log(`!sum is wrong answer ;(. Correct answer was sum. Let's try again, ${name}!`);
             return;
         }
     console.log(`Congratulations, ${name}!`);
