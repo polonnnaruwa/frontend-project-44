@@ -7,8 +7,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const sum = A + B;
-
 const brainCalc = () => {
     const name = message();
     console.log('What is the result of the expression?');
@@ -16,14 +14,15 @@ const brainCalc = () => {
     for (let i = 0; i < 3; i += 1) {
         let A = getRandomInt(1, 20);
         let B = getRandomInt(1, 20);
+        const sum = A + B;
+
         console.log(`'Question:'${A} + ${B}`);
 
         let answer = readlineSync.question('Your answer:');
 
-        if (sum(random) && answer === 'sum' ) {
+        if (answer === sum ) {
             console.log('Correct!');
-        }
-        else if (sum(random) && answer === '!sum') {
+        } else {
             console.log(`"!sum" is wrong answer ;(. Correct answer was "sum". Let's try again, ${name}!`);
             return;
         }
