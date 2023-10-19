@@ -12,65 +12,43 @@ const brainCalc = () => {
     console.log('What is the result of the expression?');
 
     for (let i = 0; i < 3; i += 1) {
-        let A, B, answer;
+        let answer;
+        let operationResult;
         const operation = getRandomInt(0, 2);
+        const A = getRandomInt(1, 20);
+        const B = getRandomInt(1, 20);
         switch (operation) {
         case 0: 
-            A = getRandomInt(1, 20);
-            B = getRandomInt(1, 20);
-            const sum = A + B;
+            operationResult = A + B;
 
             console.log(`Question: ${A} + ${B}`);
-
-            answer = readlineSync.question('Your answer: ');
-
-            if (parseInt(answer) === sum ) {
-                console.log('Correct!');
-            } else {
-                console.log(`${answer} is wrong answer ;(. Correct answer was ${sum}. Let's try again, ${name}!`);
-                return;
-            }
-            console.log(`Congratulations, ${name}!`);
             break;
 
         case 1: 
-            A = getRandomInt(1, 20);
-            B = getRandomInt(1, 20);
-            const subtraction = A - B;
+            operationResult = A - B;
 
             console.log(`Question: ${A} - ${B}`);
-
-            answer = readlineSync.question('Your answer: ');
-
-            if (parseInt(answer) === subtraction) {
-                console.log('Correct!');
-            } else {
-                console.log(`${answer} is wrong answer ;(. Correct answer was ${subtraction}. Let's try again, ${name}!`);
-                return;
-            }
-            console.log(`Congratulations, ${name}!`);
             break;
 
         case 2:
-            A = getRandomInt(1, 20);
-            B = getRandomInt(1, 20);
-            const multiplication = A * B;
+            operationResult = A * B;
     
             console.log(`Question: ${A} * ${B}`);
-    
-            answer = readlineSync.question('Your answer: ');
-    
-            if (parseInt(answer) === multiplication) {
-                console.log('Correct!');
-            } else {
-                console.log(`${answer} is wrong answer ;(. Correct answer was ${multiplication}. Let's try again, ${name}!`);
-                return;
-            }
-            console.log(`Congratulations, ${name}!`);
             break;
+
+            
         default:
             console.log("default");
         }
+        answer = readlineSync.question('Your answer: ');
+
+        if (parseInt(answer) === operationResult ) {
+            console.log('Correct!');
+        } else {
+            console.log(`${answer} is wrong answer ;(. Correct answer was ${operationResult}. Let's try again, ${name}!`);
+            return;
+        }
+        console.log(`Congratulations, ${name}!`);
        
     }
 };
