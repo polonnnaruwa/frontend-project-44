@@ -20,23 +20,19 @@ const brainCalc = () => {
         switch (operation) {
         case 0: 
             operationResult = A + B;
-
             console.log(`Question: ${A} + ${B}`);
             break;
 
         case 1: 
             operationResult = A - B;
-
             console.log(`Question: ${A} - ${B}`);
             break;
 
         case 2:
             operationResult = A * B;
-    
             console.log(`Question: ${A} * ${B}`);
             break;
-
-            
+   
         default:
             console.log("default");
         }
@@ -48,8 +44,7 @@ const brainCalc = () => {
             console.log(`${answer} is wrong answer ;(. Correct answer was ${operationResult}. Let's try again, ${name}!`);
             return;
         }
-        console.log(`Congratulations, ${name}!`);
-       
+        console.log(`Congratulations, ${name}!`); 
     }
 };
 
