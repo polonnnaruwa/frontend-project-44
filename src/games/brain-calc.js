@@ -1,4 +1,5 @@
-import {readlineSync, getRandomInt, message} from './src/index.js'
+import {getRandomInt, message} from '../index.js';
+import readlineSync from 'readline-sync';
 
 const brainCalc = () => {
     const name = message();
