@@ -1,11 +1,4 @@
-import readlineSync from 'readline-sync';
-import message from './cli.js';
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
 
 const isEven = (number) => number % 2 === 0;
 

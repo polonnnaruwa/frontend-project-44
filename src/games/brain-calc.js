@@ -1,11 +1,4 @@
-import readlineSync from 'readline-sync';
-import message from './cli.js';
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.round(Math.random() * (max - min)) + min;
-}
 
 const brainCalc = () => {
     const name = message();
