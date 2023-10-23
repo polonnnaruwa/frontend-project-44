@@ -1,4 +1,4 @@
-
+import {readlineSync, getRandomInt, message} from './src/index.js'
 
 const isEven = (number) => number % 2 === 0;
 
