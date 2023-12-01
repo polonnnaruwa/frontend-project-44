@@ -24,8 +24,9 @@ const brainProgression = () => {
 
     const result = array[index];
     array[index] = '..';
+    const strArray = array.join(' ');
 
-    console.log(`Question: ${array}`);
+    console.log(`Question: ${strArray}`);
 
     const answer = readlineSync.question('Your answer: ');
     if (parseInt(answer, 10) === result) {
