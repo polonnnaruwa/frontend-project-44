@@ -13,7 +13,7 @@ const isPrime = (n) => {
   return true;
 };
 
-const brainPrime = () => {
+const runBrainPrime = () => {
   const name = message();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -37,4 +37,4 @@ const brainPrime = () => {
     console.log(`Congratulations, ${name}!`);
   }
 };
-export default brainPrime;
+export default runBrainPrime;

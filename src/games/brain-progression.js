@@ -14,7 +14,7 @@ const makeProgression = () => {
   return array;
 };
 
-const brainProgression = () => {
+const runBrainProgression = () => {
   const name = message();
   console.log('What number is missing in the progression?');
 
@@ -39,4 +39,4 @@ const brainProgression = () => {
   }
 };
 
-export default brainProgression;
+export default runBrainProgression;

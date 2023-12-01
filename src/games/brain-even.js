@@ -3,7 +3,7 @@ import { getRandomInt, message } from '../index.js';
 
 const isEven = (number) => number % 2 === 0;
 
-const brainEvenGame = () => {
+const runBrainEvenGame = () => {
   const name = message();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -28,4 +28,4 @@ const brainEvenGame = () => {
 
   console.log(`Congratulations, ${name}!`);
 };
-export default brainEvenGame;
+export default runBrainEvenGame;

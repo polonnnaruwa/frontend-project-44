@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { getRandomInt, message } from '../index.js';
 
-const brainCalc = () => {
+const runBrainCalc = () => {
   const name = message();
   console.log('What is the result of the expression?');
 
@@ -41,4 +41,4 @@ const brainCalc = () => {
   }
 };
 
-export default brainCalc;
+export default runBrainCalc;
