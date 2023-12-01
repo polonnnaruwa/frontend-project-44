@@ -9,7 +9,7 @@ const brainEvenGame = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const random = getRandomInt(1, 20);
-    console.log(`'Question:'${random}`);
+    console.log(`Question: ${random}`);
 
     const answer = readlineSync.question('Your answer:');
 
