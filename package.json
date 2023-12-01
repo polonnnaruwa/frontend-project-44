@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/polonnnaruwa/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/polonnnaruwa/frontend-project-44/actions)",
+  "description": "Проект состоит из 5 консольных игр, которые являются тренировкой мозга. В каждой игре вы получаете 3 вопроса, на которые нужо ответить правильно. Победой считается правильные ответы на три вопроса подряд. В ином случае игра будет завершена, и вы сможете попробовать еще раз.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
