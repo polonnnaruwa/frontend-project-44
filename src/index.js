@@ -1,25 +1,25 @@
 import readlineSync from 'readline-sync';
 
 export const message = () => {
-    console.log("Welcome to the brain Games!")   
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    return name;   
+  console.log('Welcome to the brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
 };
 
 export function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.round(Math.random() * (max - min)) + min;
+  const newMin = Math.ceil(min);
+  const newMax = Math.floor(max);
+  return Math.round(Math.random() * (newMax - newMin)) + newMin;
 }
 
 export function nod(x, y) {
-    x = Math.abs(x);
-    y = Math.abs(y);
-    while(y) {
-        var t = y;
-        y = x % y;
-        x = t;
-    }
-    return x;
+  let newX = Math.abs(x);
+  let newY = Math.abs(y);
+  while (newY) {
+    const t = newY;
+    newY = newX % newY;
+    newX = t;
+  }
+  return newX;
 }
