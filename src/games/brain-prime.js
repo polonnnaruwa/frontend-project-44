@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, message } from '../index.js';
+import { getRandomNumber, message } from '../index.js';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -18,7 +18,7 @@ const runBrainPrime = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomInt(1, 20);
+    const number = getRandomNumber(1, 20);
     console.log(`Question: ${number}`);
 
     const result = isPrime(number);

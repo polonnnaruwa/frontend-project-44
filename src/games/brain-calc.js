@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, message } from '../index.js';
+import { getRandomNumber, message } from '../index.js';
 
 const runBrainCalc = () => {
   const name = message();
@@ -7,9 +7,9 @@ const runBrainCalc = () => {
 
   for (let i = 0; i < 3; i += 1) {
     let operationResult;
-    const operation = getRandomInt(0, 2);
-    const A = getRandomInt(1, 20);
-    const B = getRandomInt(1, 20);
+    const operation = getRandomNumber(0, 2);
+    const A = getRandomNumber(1, 20);
+    const B = getRandomNumber(1, 20);
     switch (operation) {
       case 0:
         operationResult = A + B;

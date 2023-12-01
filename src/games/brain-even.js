@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, message } from '../index.js';
+import { getRandomNumber, message } from '../index.js';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -8,7 +8,7 @@ const runBrainEvenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const random = getRandomInt(1, 20);
+    const random = getRandomNumber(1, 20);
     console.log(`Question: ${random}`);
 
     const answer = readlineSync.question('Your answer:');

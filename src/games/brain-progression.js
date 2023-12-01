@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, message } from '../index.js';
+import { getRandomNumber, message } from '../index.js';
 
 const makeProgression = () => {
-  const step = getRandomInt(1, 4);
-  let number = getRandomInt(1, 4);
+  const step = getRandomNumber(1, 4);
+  let number = getRandomNumber(1, 4);
   const array = [number];
 
   for (let i = 0; i <= 9; i += 1) {
@@ -20,7 +20,7 @@ const runBrainProgression = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const array = makeProgression();
-    const index = getRandomInt(0, 9);
+    const index = getRandomNumber(0, 9);
 
     const result = array[index];
     array[index] = '..';
