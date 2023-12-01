@@ -23,7 +23,7 @@ const brainProgression = () => {
     const index = getRandomInt(0, 9);
 
     const result = array[index];
-    array[index] = '...';
+    array[index] = '..';
 
     console.log(`Question: ${array}`);
 
