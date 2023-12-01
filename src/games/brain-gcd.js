@@ -1,5 +1,16 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, message, nod } from '../index.js';
+import { getRandomNumber, message } from '../index.js';
+
+function nod(x, y) {
+  let newX = Math.abs(x);
+  let newY = Math.abs(y);
+  while (newY) {
+    const t = newY;
+    newY = newX % newY;
+    newX = t;
+  }
+  return newX;
+}
 
 const runBrainGcd = () => {
   const name = message();

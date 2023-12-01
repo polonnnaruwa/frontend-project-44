@@ -12,14 +12,3 @@ export function getRandomNumber(min, max) {
   const newMax = Math.floor(max);
   return Math.round(Math.random() * (newMax - newMin)) + newMin;
 }
-
-export function nod(x, y) {
-  let newX = Math.abs(x);
-  let newY = Math.abs(y);
-  while (newY) {
-    const t = newY;
-    newY = newX % newY;
-    newX = t;
-  }
-  return newX;
-}
