@@ -8,7 +8,7 @@ const brainGcd = () => {
   for (let i = 0; i < 3; i += 1) {
     const x = getRandomInt(1, 100);
     const y = getRandomInt(1, 100);
-    console.log(`'Question:'${x} ${y}`);
+    console.log(`Question: ${x} ${y}`);
     const result = nod(x, y);
 
     const answer = readlineSync.question('Your answer: ');
