@@ -5,7 +5,7 @@ const isPrime = (n) => {
   if (n === 1) {
     return false;
   }
-  for (let x = 2; x < n; x++) {
+  for (let x = 2; x < n; x += 1) {
     if (n % x === 0) {
       return false;
     }
