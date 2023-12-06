@@ -11,7 +11,7 @@ const isPrime = (n) => {
   }
   return true;
 };
-export const rule = 'Answer "yes" if the number is prime, otherwise answer "no".';
+export const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export const runBrainPrime = () => {
   const number = getRandomNumber(1, 20);
   console.log(`Question: ${number}`);
