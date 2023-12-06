@@ -1,11 +1,14 @@
 import readlineSync from 'readline-sync';
 
 const maxNumberOfQuestion = 3;
-
-const runEngine = (rule, generateRound) => {
+export const message = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  return name;
+};
+const runEngine = (rule, generateRound) => {
+  const name = message();
 
   console.log(rule);
 
