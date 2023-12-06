@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber, message } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -12,29 +11,12 @@ const isPrime = (n) => {
   }
   return true;
 };
-
-const runBrainPrime = () => {
-  const name = message();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
-  for (let i = 0; i < 3; i += 1) {
-    const number = getRandomNumber(1, 20);
-    console.log(`Question: ${number}`);
-
-    const result = isPrime(number);
-
-    const answer = readlineSync.question('Your answer: ');
-
-    const isYes = answer === 'yes';
-    const correctAnswer = (answer === result) ? 'yes' : 'no';
-
-    if (result === isYes) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${name}!`);
-      return;
-    }
-    console.log(`Congratulations, ${name}!`);
+export const rule = 'Answer "yes" if the number is prime, otherwise answer "no".';
+export const runBrainPrime = () => {
+  const number = getRandomNumber(1, 20);
+  console.log(`Question: ${number}`);
+  if (isPrime(number)) {
+    return 'yes';
   }
+  return 'no';
 };
-export default runBrainPrime;

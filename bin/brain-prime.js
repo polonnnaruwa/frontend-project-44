@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainPrime from '../src/games/brainPrime.js';
+import { runBrainPrime, rule } from '../src/games/brainPrime.js';
+import runEngine from '../src/index.js';
 
-runBrainPrime();
+runEngine(rule, runBrainPrime);

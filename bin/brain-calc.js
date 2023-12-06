@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainCalc from '../src/games/brainCalc.js';
+import { runBrainCalc, rule } from '../src/games/brainCalc.js';
+import runEngine from '../src/index.js';
 
-runBrainCalc();
+runEngine(rule, runBrainCalc);
