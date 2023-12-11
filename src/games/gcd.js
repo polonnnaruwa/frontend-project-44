@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-function nod(x, y) {
+function getGcd(x, y) {
   let newX = Math.abs(x);
   let newY = Math.abs(y);
   while (newY) {
@@ -12,10 +12,10 @@ function nod(x, y) {
 }
 export const rule = 'Find the greatest common divisor of given numbers.';
 export const runBrainGcd = () => {
-  const x = getRandomNumber(1, 100);
-  const y = getRandomNumber(1, 100);
-  console.log(`Question: ${x} ${y}`);
-  const result = nod(x, y);
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
+  console.log(`Question: ${number1} ${number2}`);
+  const result = getGcd(number1, number2);
 
   return result.toString();
 };

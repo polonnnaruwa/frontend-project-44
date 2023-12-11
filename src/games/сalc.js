@@ -5,22 +5,22 @@ export const rule = 'What is the result of the expression?';
 export const runBrainCalc = () => {
   let operationResult;
   const operation = getRandomNumber(0, 2);
-  const A = getRandomNumber(1, 20);
-  const B = getRandomNumber(1, 20);
+  const number1 = getRandomNumber(1, 20);
+  const number2 = getRandomNumber(1, 20);
   switch (operation) {
     case 0:
-      operationResult = A + B;
-      console.log(`Question: ${A} + ${B}`);
+      operationResult = number1 + number2;
+      console.log(`Question: ${number1} + ${number2}`);
       break;
 
     case 1:
-      operationResult = A - B;
-      console.log(`Question: ${A} - ${B}`);
+      operationResult = number1 - number2;
+      console.log(`Question: ${number1} - ${number2}`);
       break;
 
     case 2:
-      operationResult = A * B;
-      console.log(`Question: ${A} * ${B}`);
+      operationResult = number1 * number2;
+      console.log(`Question: ${number1} * ${number2}`);
       break;
 
     default:
