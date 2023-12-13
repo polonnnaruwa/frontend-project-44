@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils.js';
+import runEngine from '../index.js';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -19,4 +20,7 @@ export const runBrainPrime = () => {
     return 'yes';
   }
   return 'no';
+};
+export const startGame = () => {
+  runEngine(rule, runBrainPrime);
 };

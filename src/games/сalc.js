@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils.js';
+import runEngine from '../index.js';
 
 export const rule = 'What is the result of the expression?';
 
@@ -27,4 +28,8 @@ export const runBrainCalc = () => {
       console.log('default');
   }
   return operationResult.toString();
+};
+
+export const startGame = () => {
+  runEngine(rule, runBrainCalc);
 };

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { runBrainProgression, rule } from '../src/games/progression.js';
-import runEngine from '../src/index.js';
+import { startGame } from '../src/games/progression.js';
 
-runEngine(rule, runBrainProgression);
+startGame();

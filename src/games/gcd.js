@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils.js';
+import runEngine from '../index.js';
 
 function getGcd(x, y) {
   let newX = Math.abs(x);
@@ -18,4 +19,7 @@ export const runBrainGcd = () => {
   const result = getGcd(number1, number2);
 
   return result.toString();
+};
+export const startGame = () => {
+  runEngine(rule, runBrainGcd);
 };

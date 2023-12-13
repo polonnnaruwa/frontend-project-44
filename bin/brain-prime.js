@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { runBrainPrime, rule } from '../src/games/prime.js';
-import runEngine from '../src/index.js';
+import { startGame } from '../src/games/prime.js';
 
-runEngine(rule, runBrainPrime);
+startGame();

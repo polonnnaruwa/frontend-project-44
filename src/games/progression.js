@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils.js';
+import runEngine from '../index.js';
 
 const maxArrayLength = 9;
 
@@ -24,4 +25,7 @@ export const runBrainProgression = () => {
 
   console.log(`Question: ${strArray}`);
   return result.toString();
+};
+export const startGame = () => {
+  runEngine(rule, runBrainProgression);
 };
