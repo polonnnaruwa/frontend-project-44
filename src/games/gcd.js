@@ -15,10 +15,10 @@ export const rule = 'Find the greatest common divisor of given numbers.';
 export const runBrainGcd = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
-  console.log(`Question: ${number1} ${number2}`);
+  const question = `Question: ${number1} ${number2}`;
   const result = getGcd(number1, number2);
 
-  return result.toString();
+  return [question, result.toString()];
 };
 export const startGame = () => {
   runEngine(rule, runBrainGcd);

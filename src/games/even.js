@@ -7,12 +7,10 @@ export const rule = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 export const runBrainEvenGame = () => {
   const randomNumber = getRandomNumber(1, 20);
-  console.log(`Question: ${randomNumber}`);
+  const question = `Question: ${randomNumber}`;
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
-  if (isEven(randomNumber)) {
-    return 'yes';
-  }
-  return 'no';
+  return [question, correctAnswer];
 };
 
 export const startGame = () => {

@@ -23,8 +23,8 @@ export const runBrainProgression = () => {
   array[index] = '..';
   const strArray = array.join(' ');
 
-  console.log(`Question: ${strArray}`);
-  return result.toString();
+  const question = `Question: ${strArray}`;
+  return [question, result.toString()];
 };
 export const startGame = () => {
   runEngine(rule, runBrainProgression);
