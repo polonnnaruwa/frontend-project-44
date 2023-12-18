@@ -17,10 +17,10 @@ export const runBrainProgression = () => {
   const step = getRandomNumber(1, 4);
   const number = getRandomNumber(1, 4);
   const progression = makeProgression(step, number, maxArrayLength);
-  const index = getRandomNumber(0, progression.length - 1);
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
 
-  const result = progression[index];
-  progression[index] = '..';
+  const result = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
   const progressionStr = progression.join(' ');
 
   const question = `${progressionStr}`;
