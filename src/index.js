@@ -10,10 +10,8 @@ const runEngine = (rule, generateRound) => {
   console.log(rule);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const questionAndAnswer = generateRound();
-    const question = questionAndAnswer[0];
+    const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
-    const correctAnswer = questionAndAnswer[1];
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer !== userAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${name}!`);
