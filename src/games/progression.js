@@ -21,9 +21,9 @@ export const runBrainProgression = () => {
 
   const result = progression[index];
   progression[index] = '..';
-  const strArray = progression.join(' ');
+  const progressionStr = progression.join(' ');
 
-  const question = `Question: ${strArray}`;
+  const question = `${progressionStr}`;
   return [question, result.toString()];
 };
 export const startGame = () => {

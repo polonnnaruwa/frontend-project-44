@@ -15,7 +15,7 @@ export const rule = 'Find the greatest common divisor of given numbers.';
 export const runBrainGcd = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
-  const question = `Question: ${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const result = getGcd(number1, number2);
 
   return [question, result.toString()];
