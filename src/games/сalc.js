@@ -3,36 +3,34 @@ import runEngine from '../index.js';
 
 export const rule = 'What is the result of the expression?';
 
-const runOperation = (operation, number1, number2) => {
-  let operationResult;
-  let question;
-  switch (operation) {
-    case 0:
-      operationResult = number1 + number2;
-      question = `${number1} + ${number2}`;
-      break;
+const runOperation = (sign, number1, number2) => {
+  switch (sign) {
+    case '+':
+      return number1 + number2;
 
-    case 1:
-      operationResult = number1 - number2;
-      question = `${number1} - ${number2}`;
-      break;
+    case '-':
+      return number1 - number2;
 
-    case 2:
-      operationResult = number1 * number2;
-      question = `${number1} * ${number2}`;
-      break;
+    case '*':
+      return number1 * number2;
 
     default:
-      console.log('default');
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
-  return [question, operationResult.toString()];
 };
 
 export const runBrainCalc = () => {
-  const operation = getRandomNumber(0, 2);
+  const signs = '+-*';
+  const signIndex = getRandomNumber(0, signs.length - 1);
+  const sign = signs[signIndex];
+
   const number1 = getRandomNumber(1, 20);
   const number2 = getRandomNumber(1, 20);
-  return runOperation(operation, number1, number2);
+  const answer = runOperation(sign, number1, number2);
+
+  const question = `${number1} ${sign} ${number2}`;
+
+  return [question, answer.toString()];
 };
 
 export const startGame = () => {
